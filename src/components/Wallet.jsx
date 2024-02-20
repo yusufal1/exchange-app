@@ -4,6 +4,7 @@ const Wallet = () => {
 
   const [balance, setBalance] = useState(0)
   const [total, setTotal] = useState(0)
+  const [foreignCurrencies, setForeignCurrencies] = useState(JSON.parse(localStorage.getItem('foreignCurrencies') || '[]'));
 
   const handleBalance = (e) => {
     const newBalance = e.target.value
@@ -16,7 +17,7 @@ const Wallet = () => {
     const newTotal = Number(localStorage.getItem('totalBalance')) + Number(balance)
     setTotal(newTotal)
     setBalance(0)
-    localStorage.setItem('totalBalance', newTotal)
+    localStorage.setItem('totalBalance', newTotal.toFixed(2))
   }
 
   return (
@@ -29,6 +30,12 @@ const Wallet = () => {
           <div className='totalLeft'>
             <span className='totalText'>Toplam Bakiye</span>
             <span className='total'>{localStorage.getItem('totalBalance')}₺</span>
+            <div className='walletCurrencies'>
+              <h5>Varlıklarım</h5>
+            {foreignCurrencies.map((currency, index) => (
+              <span key={index}>{currency.amount} {currency.currency}</span>
+            ))}
+          </div>
           </div>
           <div className='totalRight'>
             <span>Bakiye Yükle</span>

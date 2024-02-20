@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../api";
-import {Link} from 'react-router-dom'
 
 const ExchangeRates = () => {
 
@@ -49,7 +48,6 @@ const handleSelectedCurrency = (e) => {
           <tr>
             <th>Döviz Cinsi</th>
             <th>Fiyat</th>
-            <th>#</th>
           </tr>
         </thead>
         <tbody>
@@ -57,7 +55,6 @@ const handleSelectedCurrency = (e) => {
             <tr key={currency}>
               <td>{currency}</td>
               <td>{exchangeData.conversion_rates[currency]}</td>
-              <td><Link to="/satinalma" className="tradeBtn">Al / Sat</Link></td>
             </tr>
           ))}
         </tbody>

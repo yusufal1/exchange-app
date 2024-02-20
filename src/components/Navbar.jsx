@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link to='/'><img src={require('../img/logo.png')} width={"50px"} alt='logo'/></Link>
         <div className='navbar-items-left'>
             <Link to='/'>Anasayfa</Link>
-            <Link to='/'>Satın Alma</Link>
+            <Link to='/satinalma'>Satın Alma</Link>
             <Link to='/'>Market</Link>
             <Link to='/'>Blog</Link>
         </div>

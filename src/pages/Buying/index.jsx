@@ -7,7 +7,6 @@ import Trade from '../../components/Trade'
 const Buying = () => {
   return (
     <div>
-        <Wallet/>
         <Trade/>
         <ExchangeRates/>
     </div>
