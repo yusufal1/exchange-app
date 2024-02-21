@@ -62,6 +62,31 @@ a {
   gap: 40px;
 }
 
+@media screen and (max-width: 768px) {
+    .banner {
+      display: flex;
+      flex-direction: column;
+      padding-top: 5%;
+      align-items: center;
+      background-color: #f7f7f7;
+      gap: 40px;
+    }
+
+    .bannerRight img {
+      max-width: 300px !important;
+    }
+
+    .bannerTitle {
+      font-size: 36px !important;
+      width: 100% !important;
+    }
+
+    .bannerText {
+      width: 100% !important;
+      color: var(--main-text-color);
+    }
+}
+
 .bannerTitle {
   font-size: 54px;
   width: 70%;
@@ -86,6 +111,7 @@ a {
 
 .exchangeRatesSection {
   margin-top: 10% !important;
+  margin-bottom: 5% !important;
 }
 
 .exchangeRatesTable {
@@ -269,6 +295,50 @@ a {
   flex-direction: column;
   font-size: 24px;
   font-weight: 500;
+}
+
+.newsTitle {
+  text-align: center;
+}
+
+.news {
+  margin-top: 10% !important;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 15px;
+}
+
+.card-img {
+  width: 70%;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.weatherBtn {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.weather {
+  display: flex;
+  gap: 5px;
+}
+
+.weatherInfo {
+  display: flex;
+  font-size: 10px;
+  gap: 8px;
+  justify-content: end;
 }
 
 

@@ -54,7 +54,7 @@ const handleSelectedCurrency = (e) => {
           {exchangeData && Object.keys(exchangeData.conversion_rates).map(currency => (
             <tr key={currency}>
               <td>{currency}</td>
-              <td>{exchangeData.conversion_rates[currency]}</td>
+              <td>{(1/exchangeData.conversion_rates[currency]).toFixed(4)}</td>
             </tr>
           ))}
         </tbody>

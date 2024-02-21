@@ -1,22 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBell, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = () => {
+
   return (
     <nav className='navbar container'>
-        <Link to='/'><img src={require('../img/logo.png')} width={"50px"} alt='logo'/></Link>
+        <NavLink to='/'><img src={require('../img/logo.png')} width={"50px"} alt='logo'/></NavLink>
         <div className='navbar-items-left'>
-            <Link to='/'>Anasayfa</Link>
-            <Link to='/satinalma'>Satın Alma</Link>
-            <Link to='/'>Market</Link>
-            <Link to='/'>Blog</Link>
+            <NavLink to='/'>Anasayfa</NavLink>
+            <NavLink to='/satinalma'>Satın Alma</NavLink>
+            <NavLink to='/'>Market</NavLink>
+            <NavLink to='/'>Blog</NavLink>
         </div>
         <div className='navbar-items-right'>
-            <Link to='/'><FontAwesomeIcon icon={faBell} /></Link>
-            <Link to='/cuzdan' className='walletLink'>Cüzdan</Link>
-            <Link to='/' className='profile'><FontAwesomeIcon icon={faUser} /></Link>
+            <NavLink to='/'><FontAwesomeIcon icon={faBell} /></NavLink>
+            <NavLink to='/cuzdan' className='walletLink'>Cüzdan</NavLink>
+            <NavLink to='/' className='profile'><FontAwesomeIcon icon={faUser} /></NavLink>
         </div>
     </nav>
   )

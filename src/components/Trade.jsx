@@ -80,7 +80,7 @@ const Trade = () => {
         </div>
         <div className='foreignCurrencies'>
           <h4>Varlıklarım</h4>
-          <ul>
+          <ul className='myAssets'>
             <li>{parseFloat(totalBalance).toFixed(2)}₺</li>
             {foreignCurrencies.map((currency, index) => (
               <li key={index}>{currency.amount} {currency.currency}</li>

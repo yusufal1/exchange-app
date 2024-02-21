@@ -1,9 +1,10 @@
 import React from 'react'
 import banner from '../img/banner2.svg'
-import { Link } from 'react-router-dom'
+import { Link, useRouteError } from 'react-router-dom'
 import Home from '../pages/Home'
 
 const Banner = () => {
+
   return (
     <div className='banner'>
         <div className='container banner'>
